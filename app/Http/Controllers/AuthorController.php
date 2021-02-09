@@ -83,9 +83,9 @@ class AuthorController extends Controller
       private function validation($data)
       {
         $rules=[
-            'name' => 'max:255|min:3',
-            'gender' => 'max:255|in:male,female',
-            'country' => 'max:255'
+            'name' => 'required|max:255|min:3',
+            'gender' => 'required|max:255|in:male,female',
+            'country' => 'required|max:255'
         ];
         $this->validate($data, $rules);
       }
